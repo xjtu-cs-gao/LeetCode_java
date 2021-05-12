@@ -1,3 +1,3 @@
 # LeetCode_java
 
-保存自己的LC刷题记录
+LC的刷题记录(JAVA)
