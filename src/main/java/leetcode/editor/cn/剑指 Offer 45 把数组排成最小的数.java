@@ -39,7 +39,18 @@ public class 把数组排成最小的数{
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public String minNumber(int[] nums) {
-
+    	if(nums == null || nums.length == 0)
+    		return "";
+    	int n = nums.length;
+    	String[] nums_string = new String[n];
+    	for(int i = 0; i < n; i++){
+    		nums_string[i] = nums[i] + "";
+		}
+    	Arrays.sort(nums_string, (s1, s2) -> (s1 + s2).compareTo(s2 + s1));
+    	String ret = "";
+    	for(String str : nums_string)
+    		ret += str;
+    	return ret;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

@@ -38,7 +38,7 @@ package leetcode.editor.cn;
 //
 // 注意：本题与主站 50 题相同：https://leetcode-cn.com/problems/powx-n/ 
 // Related Topics 递归 
-// 👍 151 👎 0
+// 👍 154 👎 0
 
 public class 数值的整数次方{
 	public static void main(String[] args) {
@@ -48,21 +48,21 @@ public class 数值的整数次方{
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public double myPow(double x, int n) {
-    	if(n==0) return 1;
-    	long b = n;
-    	if(n<0){
-    		x = 1 / x;
-    		b = -1 * b;
+		if(n==0) return 1;
+		long b = n;
+		if(n<0){
+			x = 1 / x;
+			b = -1 * b;
 		}
-    	double ans=1.0;
-    	while(b!=0){
-    		if(b%2==1){
-    			ans *= x;
+		double ans=1.0;
+		while(b!=0){
+			if(b%2==1){
+				ans *= x;
 			}
-    		b /= 2;
-    		x = x * x;
+			b /= 2;
+			x = x * x;
 		}
-    	return ans;
+		return ans;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
