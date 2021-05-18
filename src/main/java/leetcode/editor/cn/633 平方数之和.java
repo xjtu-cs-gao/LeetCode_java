@@ -42,7 +42,7 @@ package leetcode.editor.cn;
 // 0 <= c <= 231 - 1 
 // 
 // Related Topics 数学 
-// 👍 213 👎 0
+// 👍 280 👎 0
 
 public class 平方数之和{
 	public static void main(String[] args) {
@@ -52,21 +52,21 @@ public class 平方数之和{
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public boolean judgeSquareSum(int c) {
-    	int left = 0;
-    	int right = (int)Math.sqrt(c);
-    	while(left<=right){
-    		int sum = left * left + right * right;
-    		if(sum == c){
-    			return true;
+		int left = 0;
+		int right = (int)Math.sqrt(c);
+		while(left<=right){
+			int sum = left * left + right * right;
+			if(sum == c){
+				return true;
 			}
-    		else if(sum > c){
-    			right --;
+			else if(sum > c){
+				right --;
 			}
-    		else{
-    			left++;
+			else{
+				left++;
 			}
 		}
-    	return false;
+		return false;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

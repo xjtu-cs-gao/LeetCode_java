@@ -33,7 +33,7 @@ package leetcode.editor.cn;
 // -109 <= nums1[i], nums2[i] <= 109 
 // 
 // Related Topics 数组 双指针 
-// 👍 821 👎 0
+// 👍 953 👎 0
 
 public class 合并两个有序数组{
 	public static void main(String[] args) {
@@ -43,16 +43,16 @@ public class 合并两个有序数组{
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
-    	int i = m-1, j = n-1, index = m+n-1;
-    	while(i>=0 && j>=0){
-    		if(nums1[i]>nums2[j]){
-    			nums1[index--] = nums1[i--];
+		int i = m-1, j = n-1, index = m+n-1;
+		while(i>=0 && j>=0){
+			if(nums1[i]>nums2[j]){
+				nums1[index--] = nums1[i--];
 			}else{
-    			nums1[index--] = nums2[j--];
+				nums1[index--] = nums2[j--];
 			}
 		}
-    	while(j>=0){
-    		nums1[index--] = nums2[j--];
+		while(j>=0){
+			nums1[index--] = nums2[j--];
 		}
     }
 }
